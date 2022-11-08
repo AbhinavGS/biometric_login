@@ -13,6 +13,13 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   bool authenticated = false;
 
+  @override
+  void initState() {
+    // TODO: implement initState
+    _login();
+    super.initState();
+  }
+
   void _login() async {
     final authenticate = await LocalAuth.authenticate();
     setState(() {
